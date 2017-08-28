@@ -7,7 +7,7 @@
       <div v-if="showForm" class="todo_form">
         <h3>Add To-Do</h3>
         <label for="newtodo">To-Do</label>
-        <input type="text" id="newtodo" v-model="todoTitle"/>
+        <input type="text" id="newtodo" v-model="todoTitle" v-on:keyup.13="addTodo"/>
         <button v-on:click="addTodo">Create</button>
         <button v-on:click="cancelTodo">Cancel</button>
       </div>

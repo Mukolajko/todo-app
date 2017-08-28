@@ -3,7 +3,7 @@
     <h3>Login to view or add TO-DOS</h3>
     <div>
       <label for="username">UserName</label>
-      <input type="text" id="username" v-model="username"/>
+      <input type="text" id="username" v-model="username" v-on:keyup.13="login"/>
       <button v-on:click="login">Log in</button>
     </div>
   </div>
