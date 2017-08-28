@@ -22,8 +22,7 @@ export default new Router({
     //to catch all 404 routes. Redirect to login page.
     {
       path: '*',
-      name: 'Login',
-      component: Login
+      redirect: '/'
     }
   ]
 })
