@@ -71,10 +71,13 @@
           this.helpers.showErrorMessage("You must enter to-do title.");
           return;
         }
+        let title = this.todoTitle;
+        //reset input value
+        this.todoTitle = '';
         //set up todo object and save
         let todo = {
           userId: this.user.id,
-          title: this.todoTitle,
+          title: title,
           completed: false
         };
         let todoURL = this.globals.url + this.globals.todosPath;
@@ -84,8 +87,6 @@
             //if all ok push todo in array
             if (newTodo) {
               this.activetodos.push(newTodo);
-              //reset input value
-              this.todoTitle = '';
             }
             else {
               this.helpers.showErrorMessage("API Error in creating todos");
